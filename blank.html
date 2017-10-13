@@ -4,19 +4,27 @@
     <meta charset="utf-8">
     <title>JS Project 1 of 7</title>
     <script type="text/javascript">
+      // sets the variable for the prompt
       var who = prompt ('what is your name?', 'enter name');
-
+      // allows js to fire after DOM is loaded
       window.onload = function() {
+        // function to allow for user to click 'cancel' on prompt
         if (who != null) {
+          // executed when prompt has value and inserts results to the DOM
           document.getElementById('name').innerHTML = 'welcome to my game' + ' ' + who + ' ' + 'are you ready to play?';
         }
+        // 'cancel' condition fires
         else {
+          // fires prompt again with diff msg
           prompt ('in order to play, please enter name..', 'don\'t be shy');
+          // inserts value from 2nd prompt to DOM, there is BUG it is not grabbing the value from the 2nd prompt
+          document.getElementById('name').innerHTML = 'welcome to my game' + ' ' + who + ' ' + 'it wasn\'t that difficult to reveal your name, wasn\'t it?' + ' ' + 'are you ready to play?';
         }
       }
     </script>
   </head>
   <body>
+    <!-- id to display js input -->
     <div id="name">
     </div>
   </body>
