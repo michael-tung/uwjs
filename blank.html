@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Project 1 of 7</title>
+    <script type="text/javascript">
+      var who = prompt ('what is your name?', 'enter name');
+
+      window.onload = function() {
+        if (who != null) {
+          document.getElementById('name').innerHTML = 'welcome to my game' + ' ' + who + ' ' + 'are you ready to play?';
+        }
+        else {
+          prompt ('in order to play, please enter name..', 'don\'t be shy');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="name">
+    </div>
+  </body>
+</html>
