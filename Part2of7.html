@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Project Part 1 of 7</title>
+    <script>
+   // *********************************************
+   // **    Code Author:   Yan De Wulf
+   // **    Date: 10/15/2017
+   // **    Description: prompts user’s name, and
+   // **    display welcome message with name in
+   // **    an alert box.
+   // **
+   // **********************************************
+   // **       Change Log
+   // **     10/16/18 – Michael Tung
+   // **********************************************
+
+      var username;
+// ask user to provide name
+      username = prompt("Your name?");
+// while loop keeps prompting for name until user provides a value
+      while(username.length < 1 === true)
+    {
+         alert("Please provide a name.");
+         username = prompt("Your name?");
+    };
+// display name provided by user
+             alert("Your name is: " + username);
+    </script>
+</head>
+   <body>
+   <script src="scripts.js"></script>
+   </body>
+</html>
