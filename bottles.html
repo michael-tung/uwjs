@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      99 Bottles
+    </title>
+    <script>
+      var count = 99;
+      var word = "bottles";
+
+      while (count > 1 ) {
+        console.log (count + " " + word + " of beer on the wall");
+        console.log (count + " " + word + " of beer,");
+        console.log("Take one down , pass it around,");
+        count = count - 1;
+        if (count > 1) {
+          console.log(count + " " + word + " of beer on the wall.");
+        }
+        else {
+          console.log("No More " + word + " of beer on the wall.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
