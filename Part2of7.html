@@ -2,7 +2,7 @@
 <head>
    <meta charset="utf-8">
    <title>Project Part 1 of 7</title>
-    <script>
+    <script type="text/javascript">
    // *********************************************
    // **    Code Author:   Yan De Wulf
    // **    Date: 10/15/2017
@@ -12,23 +12,66 @@
    // **
    // **********************************************
    // **       Change Log
-   // **     10/16/18 – Michael Tung
+   // **     10/21/18 – Michael Tung Part 2 of 7 Game
    // **********************************************
 
-      var username;
-// ask user to provide name
-      username = prompt("Your name?");
-// while loop keeps prompting for name until user provides a value
+      //var for name - mt
+      var username = prompt("Your name?");
+      //var for game size - mt
+      var size = prompt("what size of game do you want to play? Enter number greater than 5");
+      //var for loop counter - mt
+      var i = 0;
+
+      // while loop keeps prompting for name until user provides a value -mt
       while(username.length < 1 === true)
-    {
+        {
+        //tells user to provide name as it was missing on the 1st prompt - mt
          alert("Please provide a name.");
+         //re-prompt user to enter name again - mt
          username = prompt("Your name?");
-    };
-// display name provided by user
-             alert("Your name is: " + username);
+        };
+
+      //checks size var is a number - mt
+      while(isNaN(size)) {
+        //tells user must enter number - mt
+        alert("You Must Enter a Number");
+        //
+        size = prompt("what size of game do you want to play? Enter number greater than 5");
+      }
+
+      //displays name on page - mt
+      document.write ("Your name is: " + username);
+
+      //check if size if 5 or greater - mt
+      if (size >= 5) {
+        //loops through till size value - mt
+        for (i = 0; i < size; i++) {
+          //writes into the document of the number of zeros based on size var -mt
+          document.write (" " + 0);
+        }
+      //if size is less than 5 -mt
+      } else {
+        //define a newSize var to new prompt - mt
+        var newSize = prompt("enter game size more than 5");
+
+        //checks if newSize var is 5 or greater - mt
+        if (newSize >= 5){
+          //loops through newSize value - mt
+          for (i = 0; i < newSize; i++) {
+            //writes into the document of the number of zeros based on newSize var - mt
+            document.write (" " + 0);
+          }
+          //if newSize var is smaller than 5 - mt
+        } else
+          {
+          //writes to document msg - mt
+          document.write (" " + "Game size has to b 5 or bigger into order to play, Good Bye!");
+          }
+      }
     </script>
 </head>
    <body>
-   <script src="scripts.js"></script>
+    <div>
+    </div>
    </body>
 </html>
