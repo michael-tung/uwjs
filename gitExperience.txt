@@ -1,0 +1,7 @@
+I work on a regular basis with my team using Git.
+
+Cutting release branches, features branches, git show commits, push and pull rebase, merge branches, resolve conflicts.
+
+I have a screen shot of my terminal, for this assignment I create 'develop' branch, cut a tag and merge 'develop' into 'master' to deploy
+
+Thanks! 
