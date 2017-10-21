@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>99 Bottles of Beer on the Wall</title>
+</head>
+<body>
+	<h1>99 Bottles of Beer</h1>
+	<script>
+  // change log - Michael Tung
+  // initialize variables
+  var count = 99;
+  var word = "bottles";
+
+  // loop over all the bottles and display the lyrics
+  while (count > 1) {
+      document.write(count + " " + word + " of beer on the wall<br>");
+      document.write(count + " " + word + " of beer,<br>");
+      document.write("Take one down, pass it around,<br>");
+      count = count - 1;
+      //change the 0 > 1 cos this logic will only run when > 1 then it flows to Else
+      if (count > 1) {
+         document.write(count + " " + word + " of beer on the wall.<br>");
+      }
+      //custom condition flow for count of 1
+      else if (count === 1) {
+        //init single var of bottle
+        var single = "bottle";
+          //reinterate the language of the repitition with a new single var value
+          document.write(count + " " + single + " of beer on the wall.<br>");
+          document.write(count + " " + single + " of beer on the wall<br>");
+          document.write(count + " " + single + " of beer,<br>");
+          document.write("Take one down, pass it around,<br>");
+          //kept word var to print there is more bottles
+          document.write("No more " + word + " of beer on the wall.<br>");
+       }
+  }
+  </script>
+</body>
+</html>
