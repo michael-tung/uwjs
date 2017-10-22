@@ -1,7 +1,9 @@
 I work on a regular basis with my team using Git.
 
-Cutting release branches, features branches, git show commits, push and pull rebase, merge branches, resolve conflicts.
+Cutting release branches, features branches, git show commits, push and pull rebase, merge branches, resolve conflicts, reverts, etc..
 
-I have a screen shot of my terminal, for this assignment I create 'develop' branch, cut a tag and merge 'develop' into 'master' to deploy
+I do wish we could submit assignments via Git, by each having our own branches and feature branches, merging into "submission" branch as needed and forking or checking out other user branches to get their files and push into "our branch" and merge into "submission" branch.
 
-Thanks! 
+I feel that this will help everyone to get familiar with Git very quickly and learn as we go along. I am not a Git pro, as I am still learning Git everyday :)   
+
+Thanks!
