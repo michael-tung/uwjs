@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My First JavaScript</title>
+</head>
+<body>
+<p id="welcomeMessage">The HTML goes here</p>
+
+<script>
+	// *********************************************
+	// **    Code Author: Carol_Farris (edited by Jun Kim)
+	// **    Date: 10_11_17
+	// **    Last Modified: 10/22/17
+	// **    Description: We work for a game development company. We have been tasked with building a browser based clone of minesweeper.
+	// **
+	// *********************************************
+	// **    Change Log
+	// **    10/9/17- Added header and changelog. Cliff
+	// **    10/12/17- Added prompt for user name and display welcome message in alert box. 
+	// **    10/20/17- Added the function for looping zero for each space. - Jun Kim
+	// **    10/22/17- Added loop function when user does not enter the right answer. - Jun Kim
+	// **    10/29/17 - project part 3 of 7 - Michael Tung
+	// **    
+	// *********************************************
+	//
+	
+	//below will prompt user for their name
+	var name = 0,
+		space = 0;
+	
+	// Users entering their names.
+	while ((name < 1) && (name !== null)){
+		name = prompt('Greetings! What is your name?'); //Asks the user what his/her name is.
+
+		if (name.length == 0) {
+			alert("Please enter at least one letter."); //Alert the user when nothing is entered.
+			name = 0; // Resets back to 0 to continue loop.
+		} 
+	}
+	
+	// Users entering the number of locations.
+	while ((space < 5) && (space !== null)){
+		space = prompt('Nice to meet you' + ' ' + name + '!' + ' ' + 'How many locations would you like? (minimum of 5)'); //Asks the user how many locations.
+
+		// Checking to see if the user entered a number.
+		if (isNaN(space)) {
+			alert("Please enter numbers only."); //Alert the user when the user does not enter a number.
+			space = 0; // Resets back to 0 to continue loop.
+		} else if (space < 5) {
+			alert("Please enter a number above 5."); //Alert the user when the number is not above 5.
+			space = 0; // Resets back to 0 to continue loop.
+		} 
+
+	}
+
+	document.getElementById("welcomeMessage").innerHTML = "This is" + " " + name + "'s playground." //This changes the body text once the user enter's his/her name.
+	
+	var table = []; //init empty array to store space var value - mt
+	var counter = 0;
+
+	if (space >= 5) {
+			for (counter = 0; counter < space; counter++){
+				table.push(0);
+				document.write(table.toString() + " " + "</br>"); //Adds "0"s according to the number entered.
+			}
+	} else {
+		//writes to document msg for anything less than 5 - mt
+		document.write(" " + "Game size has to b 5 or bigger into order to play, Good Bye!");
+	}
+	
+</script>
+</body>
+</html>

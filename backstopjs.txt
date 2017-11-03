@@ -1,0 +1,3 @@
+https://github.com/garris/BackstopJS
+
+backstop JS is a screenshot comparison tool that I have been using for a while to compare staging/dev environments with production. 

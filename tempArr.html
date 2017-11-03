@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+            //code by - Michael Tung
+
+            var tempsForWeek = [];
+
+                tempsForWeek[0] = [56, 59, 63, 66, 67, 69, 70, 69, 65, 62, 59, 56]; // Monday
+
+                tempsForWeek[1] = [57, 59, 61, 64, 67, 69, 70, 71, 71, 69, 67, 64]; // Tuesday
+
+                tempsForWeek[2] = [58, 60, 62, 64, 66, 68, 69, 70, 70, 69, 62, 57]; // Wednesday
+
+                tempsForWeek[3] = [57, 56, 69, 62, 65, 66, 68, 68, 70, 69, 59, 52]; // Thursday
+
+                tempsForWeek[4] = [52, 59, 59, 63, 67, 70, 72, 73, 77, 74, 70, 65]; // Friday
+
+                tempsForWeek[5] = [60, 58, 62, 64, 69, 70, 74, 75, 77, 77, 74, 72]; // Saturday
+
+                tempsForWeek[6] = [63, 63, 64, 68, 71, 74, 75, 76, 77, 75, 74, 73]; // Sunday
+
+
+               //use the .reduce functon to find the max temperature by day 
+               var monHigh = tempsForWeek[0].reduce(function(a,b){
+                   return Math.max(a,b);
+               })
+
+                //use the .reduce functon to find the max temperature by day
+               var tueHigh = tempsForWeek[1].reduce(function (a, b) {
+                    return Math.max(a, b);
+                })
+
+                 //use the .reduce functon to find the max temperature by day
+               var wedHigh = tempsForWeek[2].reduce(function (a, b) {
+                    return Math.max(a, b);
+                }) 
+
+                 //use the .reduce functon to find the max temperature by day
+               var thurHigh = tempsForWeek[3].reduce(function (a, b) {
+                    return Math.max(a, b);
+                }) 
+              
+                 //use the .reduce functon to find the max temperature by day
+               var friHigh = tempsForWeek[4].reduce(function (a, b) {
+                    return Math.max(a, b);
+                })
+                 //use the .reduce functon to find the max temperature by day
+               var satHigh = tempsForWeek[5].reduce(function (a, b) {
+                    return Math.max(a, b);
+                })
+                 //use the .reduce functon to find the max temperature by day
+               var sunHigh = tempsForWeek[6].reduce(function (a, b) {
+                    return Math.max(a, b);
+                })
+
+                //assigned a new array of the max temps pf each day
+                var highest = [monHigh, tueHigh, wedHigh, thurHigh, friHigh, satHigh, sunHigh ];
+
+                //sort the highest temp from the new array
+                var result = highest.sort(function(a,b){
+                    return b-a;
+                })
+
+                // array of days
+                var daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+                //write into dom the highest teemp
+                document.write("The highest temperature of the week" + " " + result[0] + "</br>");
+
+                // find condition of the highest temp
+                function checker(temp) {
+                        return temp >= result[0];
+                }
+
+                //check if original array contains the highest temp then write to dom
+                if (tempsForWeek[0].find(checker) == result[0]) {
+                    document.write(daysOfWeek[0] + "</br>");
+                }
+
+                //check if original array contains the highest temp then write to dom
+                if (tempsForWeek[1].find(checker) == result[0]) {
+                    document.write(daysOfWeek[1] + "</br>");
+                } 
+
+                //check if original array contains the highest temp then write to dom
+                if (tempsForWeek[2].find(checker) == result[0]) {
+                        document.write(daysOfWeek[2] + "</br>");
+                }
+
+                //check if original array contains the highest temp then write to dom
+                if (tempsForWeek[3].find(checker) == result[0]) {
+                        document.write(daysOfWeek[3] + "</br>");
+                }
+
+                //check if original array contains the highest temp then write to dom
+                if (tempsForWeek[4].find(checker) == result[0]) {
+                        document.write(daysOfWeek[4] + "</br>");
+                }
+
+                //check if original array contains the highest temp then write to dom
+                if (tempsForWeek[5].find(checker) == result[0]) {
+                        document.write(daysOfWeek[5] + "</br>");
+                }
+
+                //check if original array contains the highest temp then write to dom
+                if (tempsForWeek[6].find(checker) == result[0]) {
+                        document.write(daysOfWeek[6] + "</br>");
+                }
+
+
+        </script>
+    </body>
+</html>
