@@ -1,4 +1,4 @@
-<!doctype html>
+<doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -56,13 +56,20 @@
 
 	document.getElementById("welcomeMessage").innerHTML = "This is" + " " + name + "'s playground." //This changes the body text once the user enter's his/her name.
 	
-	var table = []; //init empty array to store space var value - mt
-	var counter = 0;
-
 	if (space >= 5) {
-			for (counter = 0; counter < space; counter++){
+
+		var table = [];
+
+			for (var counter = 0; counter < space; counter++){
 				table.push(0);
-				document.write(table.toString() + " " + "</br>"); //Adds "0"s according to the number entered.
+				document.write(table[0] + " "); //Adds "0"s according to the number entered.
+				
+				for (var width = 0; width < space; width++){
+					var size = [];
+					size.push(0);
+					document.write(size[0] + " " + "</br>" );
+					
+				}
 			}
 	} else {
 		//writes to document msg for anything less than 5 - mt
