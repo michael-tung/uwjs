@@ -58,23 +58,27 @@
 	
 	if (space >= 5) {
 
-		var table = [];
+        var table = [];
 
-			for (var rows = 0; rows < space; rows++){
-				table[0][1].push(0);
-				document.write(table[0] + " "); //Adds "0"s according to the number entered.
+			for (var rows = 0; rows < space; rows++){        
+
+				table[rows] = [];
 				
 				for (var column = 0; column < space; column++){
-					var size = [];
-					size.push(0);
-					document.write(size[0] + " " + "</br>" );
-					
+					table[rows][column] = 0;
 				}
 			}
 	} else {
 		//writes to document msg for anything less than 5 - mt
 		document.write(" " + "Game size has to b 5 or bigger into order to play, Good Bye!");
 	}
+
+    for (var rows = 0; rows < space; rows++) {
+        for (var column = 0; column < space; column++ ) {
+            document.write(table[rows][column] + " ");
+        }
+        document.write("<br>");
+    }
 	
 </script>
 </body>
