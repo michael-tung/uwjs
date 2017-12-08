@@ -21,7 +21,8 @@
 	// **    10/20/17- Added the function for looping zero for each space. - Jun Kim
 	// **    10/22/17- Added loop function when user does not enter the right answer. - Jun Kim
 	// **    10/29/17 - project part 3 of 7 - Michael Tung
-	// **    11/19/17 - project part 4 of 7 - Michael Tung
+    // **    11/19/17 - project part 4 of 7 - Michael Tung
+    //       12/06/2017 - project part 5 of 7 - Michael Tung
 	// *********************************************
 	//
 	
@@ -77,16 +78,32 @@
             //create the number of rows based on user input
 			for (var rows = 0; rows < space; rows++){        
 
-				table[rows] = []; //init the empty array per row 
+                table[rows] = []; //init the empty array per row 
+                                
+
 				//loop through the columns based on user input and the create the Zeros 0 in the column for each empty row array
 				for (var column = 0; column < space; column++){
-					table[rows][column] = 0; 
+
+                    table[rows][column] = 0; 
+
 				}
 			}
 	} else {
 		//writes to document msg for anything less than 5 - mt
 		document.write(" " + "Game size has to b 5 or bigger into order to play, Good Bye!");
 	}
+    
+    //init a random row Position to place mine    
+    var rowPos = Math.floor((Math.random() * parseInt(space)));
+    //init a random column position to place mine
+    var colPos = Math.floor((Math.random() * parseInt(space)));
+
+    //init a mine variable value
+    var mine = "M";
+
+     //location of the mine variable based on random array indexes
+    table[rowPos][colPos] = mine;
+   
 
     //once above condition is met, loop through the rowsa based on the limit of user imput and write to DOM with the value of the array and columns
     for (var rows = 0; rows < space; rows++) {
@@ -95,7 +112,9 @@
         }
         document.write("<br>"); //add break to column
     }
-	
+    
+    
+
 </script>
 </body>
 </html>

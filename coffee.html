@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffee Prompter by Michael Tung</title>
+    <script>
+        //define coffee type array with prices
+        var type = [["espresso", "latte", "macchiato"],[3.5, 4.25, 3.75]];
+        //define milk type array with prices
+        var addon = [["whole", "soy"],[0.25, 0.75]];
+        //define sweetner type array with prices
+        var sweet = [["white", "brown"],[0.1,0.1]];
+
+        //prmopt for user input and assign to 3 diff variables for coffee, milk, sweetner
+        var coffee = prompt("What kind of coffee? Choice: espresso, latte, macchiato").toLowerCase();
+        var milk = prompt("What kind of milk do you want? Choice: whole or soy").toLowerCase();
+        var sweeter = prompt("What kind of sweetner? Choice: white or brown").toLowerCase();
+        
+        //init a empty array for user inputs
+        var order = [];
+        
+        //grab user input and pushes into order array
+        order.push(coffee);
+        order.push(milk);
+        order.push(sweeter);
+
+        //check is order inut matches a certain coffee type
+        if (order[0] == "espresso") {
+            var coffeePrice = type[1][0];
+        } 
+        else if (order[0] == "latte" ) {
+            var coffeePrice = type[1][1];
+        }
+        else if (order[0] == "macchiato") {
+            var coffeePrice = type[1][2];
+        }
+
+        if (order[1] == "whole") {
+            var addonPrice = addon[1][0];
+        }
+        else if (order[1] == "soy") {
+            var addonPrice = addon[1][1];
+        }
+        
+        if (order[2] == "white") {
+            var sweetPrice = sweet[1][0];
+        }
+        else if (order[1] == "soy") {
+            var sweetPrice = sweet[1][1];
+        }
+
+        //calculates the total price of the user input
+        var cal = coffeePrice + addonPrice + sweetPrice;
+
+        //write to the document of the calculated price
+        document.write("Your Total Order:" + " " + cal);
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
