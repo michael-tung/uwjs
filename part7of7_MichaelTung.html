@@ -4,27 +4,34 @@
     <meta charset="utf-8">
     <title>My First JavaScript</title>
     <style>
-        body {
-            display: grid;
-            grid-template-areas: "user"
-                                 "content";
-            grid-template-columns: 50px 1fr;
-            grid-template-rows: 1ft 50px;
+   body {
+        margin: 140px;
         }
-        body .name {
-            grid-area: user;
-            border: green;
+
+        #wrapper {
+        display: grid;
+        grid-auto-rows: repeat(5, 50px);
+        grid-template-columns: repeat(5, 50px);
+        grid-gap: 10px;
+        background-color: #fff;
+        color: #444;
         }
-        body .main {
-            grid-area: content;
-            border: blue;
+
+        .box {
+        background-color: #444;
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
         }
     </style>
 </head>
 <body>
-        <div class="name"></div>
-        <div class="main"></div>
-<!-- <script>
+        <div id="title"></div>
+        <div id="wrapper">
+     
+        </div>
+<script>
 	// *********************************************
 	// **    Code Author: Carol_Farris (edited by Jun Kim)
 	// **    Date: 10_11_17
@@ -87,7 +94,29 @@
     //callback for the size function
     size ();
 
-	document.getElementById("welcomeMessage").innerHTML = "This is" + " " + name + "'s playground." //This changes the body text once the user enter's his/her name.
+
+    //create html divs
+     function createDiv() {
+        var node = document.createElement("div");
+        node.setAttribute("class", "box");
+        document.getElementById("wrapper").appendChild(node);
+    }
+
+    //set css grid column and rows 
+    function grid(){
+        var gridAdd = document.querySelector("#wrapper");
+
+        var gridSize = space;
+        gridSize = "repeat" + "(" + space + "," + "50px" + ")";
+
+        gridAdd.style.gridAutoRows = gridSize;
+        gridAdd.style.gridTemplateColumns = gridSize;
+    }
+
+
+    //define the onclick experience 
+    function 
+	document.getElementById("title").innerHTML = "This is" + " " + name + "'s playground." //This changes the body text once the user enter's his/her name.
 	
 	if (space >= 5) { //check if user enter more than 5 columns 
 
@@ -95,13 +124,17 @@
 
             //create the number of rows based on user input
 			for (var rows = 0; rows < space; rows++){        
-
+                
                 table[rows] = []; //init the empty array per row 
-                                
 
+                grid();
+                                
+                createDiv();
 				//loop through the columns based on user input and the create the Zeros 0 in the column for each empty row array
 				for (var column = 0; column < space; column++){
 
+                    grid();
+                    createDiv();
                     table[rows][column] = 0; 
 
 				}
@@ -142,6 +175,6 @@
     
     
 
-</script> -->
+</script>
 </body>
 </html>
